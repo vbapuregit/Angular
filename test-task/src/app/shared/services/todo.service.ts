@@ -4,6 +4,32 @@ import { Observable, pipe, of } from 'rxjs';
 import {map, catchError} from 'rxjs/operators';
 import { Todo } from '../model/todo';
 
+const data = [
+  {
+    "id": 11,
+    "title": "Pick up the milk",
+    "date": "2019-04-17T14:00:00.000Z",
+    "status": "In Progress"
+  },
+  {
+    "id": 12,
+    "title": "Walk the dog",
+    "date": "2019-06-18T14:00:00.000Z",
+    "status": "Not Started"
+  },
+  {
+    "id": 13,
+    "title": "Get the news paper",
+    "date": "2019-06-04T14:00:00.000Z",
+    "status": "Not Started"
+  },
+  {
+    "id": 14,
+    "title": "Read Article",
+    "date": "2019-05-07T14:00:00.000Z",
+    "status": "In Progress"
+  }
+];
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +43,8 @@ export class TodoService {
   }
 
   getTodos(api: string) : Observable<any> {  
-    return this.http.get(api);
+    // return this.http.get(api);
+    return of(data);
   }
 
   postTodo(api: string, todo: Todo) : Observable<any> {  
