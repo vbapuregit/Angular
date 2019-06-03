@@ -8,7 +8,7 @@ trigger:
 
 pool: 
   name: 'Test Agent pool'
-  demands: 'agent2-test1'
+  demands: 'agent1-test1'
 
 steps:
 - script: echo Hello, world!
