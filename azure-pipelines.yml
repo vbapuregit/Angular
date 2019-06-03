@@ -6,7 +6,9 @@
 trigger:
 - master
 
-pool: 'Test Agent pool'
+pool: 
+  name: 'Test Agent pool'
+  demands: 'agent2-test1'
 
 steps:
 - script: echo Hello, world!
